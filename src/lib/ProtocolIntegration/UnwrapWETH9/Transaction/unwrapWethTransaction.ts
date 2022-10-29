@@ -36,7 +36,7 @@ export const MulticallAsync = async(unwrapWethDataModel:IUnwrapWethDataModel) : 
   // Initialising the Uniswap Router Contract
   const routerContract = new web3.eth.Contract(UniswapV3RouterABI as AbiItem[], process.env.UniswapV3RinkebyRouterAddress);
   const QuoterContract = new qWeb3.eth.Contract(UniswapV3QuoterABI as AbiItem[], process.env.UniswapV3QuoterAddress);
-  const weth9Address = "0xc778417E063141139Fce010982780140Aa0cD5Ab"; // Rinkeby Weth Address
+  const weth9Address = process.env.weth9Address; // Rinkeby Weth Address
   // 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 Mainnet Address
 
   //Setting up the deadline for the transaction
